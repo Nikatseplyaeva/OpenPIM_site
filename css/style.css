@@ -29,7 +29,7 @@ a {
     background: #0077C8;
     border-radius: 17px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
 }
@@ -50,7 +50,7 @@ a {
 
 .header {
     font-weight: 500;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 56px;
     padding-bottom: 64px;
     
@@ -109,7 +109,7 @@ a {
 
 .main_block_small_text {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 38px;
     padding-top: 32px;
     padding-bottom: 64px;
@@ -127,14 +127,14 @@ a {
 
 .about_system_big_text {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 38px;
     padding-bottom: 32px;
 }
 
 .about_system_small_text {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     text-align: center;
     padding-bottom: 20px;
@@ -151,9 +151,7 @@ a {
     box-sizing: border-box;
     background: #FFFFFF;
     border: 2px solid #000000;
-    box-shadow: 13px 17px 19px rgba(0, 0, 0, 0.06);
     border-radius: 18px;
-    width: 100%;
     height: 600px;
     margin-top: 64px;
 }
@@ -169,9 +167,7 @@ a {
 
 .solution_item {
     border: 2px solid #000000;
-    filter: drop-shadow(4px 4px 11px rgba(0, 0, 0, 0.25));
     border-radius: 18px;
-    width: 100%;
     margin-bottom: 100px;
 }
 
@@ -236,4 +232,367 @@ a {
     margin-right: auto;
     text-align: center;
     margin-bottom: 120px;
+}
+
+/* Наши клиенты */ 
+
+.clients {
+    padding-bottom: 20px;
+}
+
+.client_logos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.client_logo {
+    width: 211px;
+    height: auto;
+}
+
+/* Преимущества */ 
+
+.advantages {
+    margin-bottom: 120px;
+}
+
+.advantages_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 64px;
+}
+
+.advantages_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.advantages_item {
+    width: 47.8%;
+    height: auto;
+}
+
+.advantages_item_top {
+    border: 2px solid #000000;
+    border-radius: 17px 17px 0px 0px;
+    padding: 40px 40px 60px 40px;
+}
+
+.advantages_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+.advantages_button {
+    padding: 12px 24px 12px 24px;
+    background: #0077C8;
+    border-radius: 17px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.advantages_item_small_text {
+    width: 444px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.advantages_item_bottom {
+    background: #0077C8;
+    border: 2px solid #000000;
+    border-radius: 0px 0px 17px 17px;
+    padding: 60px 86px 132px 40px;
+    margin-top: -2px;
+}
+
+.advantages_item_bottom_text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    width: 460px;
+}
+
+/* Начать */ 
+
+.start {
+    margin-bottom: 120px;
+}
+
+.start_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.start_item {
+    width: 47.8%;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 17px 17px 17px 17px;
+    padding-bottom: 48px;
+    text-align: center;
+}
+
+.start_img {
+    margin-top: 32px;
+    width: 371.5px;
+    height: 426px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.start_img {
+    margin-top: 32px;
+    width: 371.5px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.start_item_text_header {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+.start_item_text_small {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.start_big_item {
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 17px 17px 17px 17px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.start_img_big {
+    width: 467px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.start_big_item_text {
+    display: block;
+    margin: 180px auto;
+}
+
+/* Помощь */ 
+
+.help {
+    margin-bottom: 120px;
+    padding: 100px 0px 120px 0px;
+    background-color: #0077C8;
+    height: auto;
+}
+
+.help_text_header {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 75px;
+    color: #FFFFFF;
+    padding-bottom: 64px;
+}
+
+.help_text_small {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    color: #FFFFFF;
+    padding-bottom: 32px;
+}
+
+.help_text_small_bold {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    color: #FFFFFF;
+    padding-bottom: 64px;
+}
+
+.help_button {
+    padding: 12px 38px 12px 38px;
+    border-radius: 17px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #0077C8;
+    background: #FFFFFF;
+    margin-right: 64px;
+}
+
+/* О компании */
+
+.company {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.company_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-indent: 17px;
+    width: 566px;
+}
+
+.company_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 394px;
+    margin-bottom: 30px;
+}
+
+.company_icon {
+    width: 182px;
+    height: 182px;
+    border: 2px solid #000000;
+    border-radius: 17px;
+}
+
+.company_icon_img {
+    width: 91px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.company_icon_text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;    
+}
+
+/* Контакты */
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 120px;
+}
+
+.contacts_text {
+    padding-top: 64px;
+    padding-left: 242px;
+}
+
+.contacts_big_text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    color: #0077C8;
+}
+
+.contacts_small_text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+/* Подвал */
+
+.footer {
+    margin-top: 80px;
+}
+
+hr {
+    border: 1.5px solid #000000;
+    margin: 20px 0px 20px 0px;
+}
+
+.footer_text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 32px;
+}
+
+.footer_text_header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 32px;
+}
+
+.footer_text_small {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 32px;
+    padding-right: 124px;
+}
+
+.footer_text_small_second_col {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 32px;
+    padding-top: 60px;
+}
+
+.footer_text_col_2 {
+    padding-left: 100px;
+}
+
+.footer_text_small_col_2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 32px;
+}
+
+.text_after_footer {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 20px;
+    margin-bottom: 32px;
+}
+
+/* СТРАНИЦА ОДНОГО РЕШЕНИЯ */
+
+/* Задача */
+
+.challenge_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-indent: 17px;
+    width: 564px;
 }
