@@ -12,34 +12,40 @@
 </head>
 <body>
 
-    <!-- Главный блок -->
+    <!-- Main -->
 
     <div class="main">
         <div class="nav_bar flex_row">
-            <img src="img/openPIM_logo.png" alt="logo" class="logo">
+            <a href="index.html">
+                <img src="img/openPIM_logo.png" alt="logo" class="logo">
+            </a>
             <div class="menu">
-                <a href="#" class="menu_item">О системе</a>
-                <a href="#" class="menu_item">О компании</a>
-                <a href="#" class="menu_item">Решения</a>
-                <a href="#" class="menu_item">Контакты</a>
+                <a href="#about_system" class="menu_item">О системе</a>
+                <a href="solutions.html" class="menu_item">Решения</a>
+                <a href="#advantages" class="menu_item">Преимущества</a>
+                <a href="#contacts" class="menu_item">Контакты</a>
                 <a href="http://demo.openpim.ru/#/login?user=demo&password=demo" class="menu_item">Демо</a>
                 <a href="https://openpim.ru/university/index.html" class="menu_item">Документация</a>
-                <a href="#" class="line_button">Начать</a>
+                <a href="#start" class="line_button">Начать</a>
             </div>
         </div>
         <div class="main_block flex_row">
             <div class="main_block_text">
                 <div class="main_block_header">PIM система</div>
                 <div class="main_block_small_text">Российская open source система <br>управления информации о товарах</div>
-                <a class="button">Начать</a>
+                <a href="#start" class="button">Начать</a>
             </div>
             <img src="img/background.png" alt="background" class="background">
         </div>
     </div>
 
-    <!-- О системе -->
+    <div id="toTop">
+        <img src="img/up.png" alt="up" class="up">
+    </div>
 
-    <div class="main header">
+    <!-- About system -->
+
+    <div class="main header" id="about_system">
             О системе
     </div>
     <div class="about_system container flex_column">
@@ -47,16 +53,24 @@
         <div class="about_system_text">
             <div class="about_system_big_text">PIM (Product Information Management)</div>
             <div class="about_system_small_text">Основная задача PIM системы - это управление и распределение сложной информации о товарах по соответствующим каналам (интернет-магазин, веб-сайт, маркетплейсы, печатные каталоги, брошюры и т. д.)</div>
-            <a class="more_button">Читать больше</a>
+            <div class="info">
+                <input id="info__body_1" class="info__switch" type="checkbox">
+                <label for="info__body_1" class="info__headline">Читать больше</label>
+                <div class="info__body">
+                  Вебинары образовательного проекта Level One — современный формат интеллектуального досуга, который будет интересен всем, кто хочет узнать что-то новое. Всего за пару часов вы совершите путешествие в увлекательный мир науки и искусства. Талантливые лекторы
+                  поделятся своими знаниями, доступно расскажут о важных научных открытиях и расширят ваш кругозор.
+              
+                </div>
+            </div>
         </div>
         <a class="about_system_video">
             <img src="img/play.png" alt="play" class="about_system_play">
         </a>
     </div>
 
-    <!-- Решения -->
+    <!-- Solutions -->
 
-    <div class="main header">
+    <div class="main header" id="solutions">
             Решения
     </div>
     <div class="solutions container flex_column">
@@ -73,7 +87,7 @@
                     <div class="solution_text_small">
                         UPECO создает и развивает бренды, которые заслуженно являются лидерами своих категорий. Секрет нашего успеха в том, что мы не разделяем себя и наших покупателей. Наши продукты обладают высоким качеством и служат людям, улучшая качество их жизни. Любой наш продукт мы используем сами и с гордостью предлагаем своим близким. Именно поэтому мы задаем себе высокую планку в отношении качества, внешнего. 
                     </div>
-                    <a class="button">Подробнее</a>
+                    <a href="one_solution.html" class="button">Подробнее</a>
                 </div>
             </div>
             <div class="solution_item flex_row">
@@ -108,11 +122,11 @@
             </div>
         </div>  
     </div>
-    <a href="solutions.html" class="solution_line_button">Больше</a>
+    <a class="solution_line_button">Больше</a>
 
     <!-- Clients -->
 
-    <div class="main header">
+    <div class="main header" id="clients">
         Наши клиенты
     </div>
     <div class="clients container">
@@ -134,7 +148,7 @@
 
     <!-- Advantages -->
 
-    <div class="main header">
+    <div class="main header" id="advantages">
         Преимущества
     </div>
     <div class="advantages container flex_column">
@@ -171,7 +185,7 @@
                 </div>
                 <div class="advantages_item_bottom">
                     <div class="advantages_item_bottom_text">
-                        OpenPIM очень прост в использовании. Вы уже можете получить первые результаты через несколько часов его изучения и настройки.
+                        OpenPIM очень прост в использовании. Вы можете получить первые результаты через несколько часов его изучения и настройки.
                     </div>
                 </div>
             </div>
@@ -180,7 +194,7 @@
     
     <!-- Start -->
 
-    <div class="main header">
+    <div class="main header" id="start">
         Начать
     </div>
     <div class="start container">
@@ -213,7 +227,7 @@
     </div>
 
     <!-- Help -->
-    <div class="help flex_column">
+    <div class="help flex_column" id="contacts">
         <div class="container">
             <div class="help_text_header">
                 Мы поможем вам
@@ -225,15 +239,15 @@
                 Просто отправьте нам запрос на team@openpim.ru или позвоните <br>8 (904) 330-45-55, это совершенно бесплатно. 
             </div>
             <div class="flex_row">
-                <a class="help_button">Позвонить</a>
-                <a class="help_button">Написать</a>
+                <a href="tel:+79043304555" class="help_button">Позвонить</a>
+                <a  href="mailto:team@openpim.ru" class="help_button">Написать</a>
             </div>
         </div>
     </div>
 
     <!-- About company -->
 
-    <div class="main header">
+    <div class="main header" id="about_company">
         О компании
     </div>
     <div class="company container">
@@ -248,13 +262,13 @@
         <div class="flex_column">
             <div class="company_icons">
                 <div class="company_icon">
-                    <img src="img/company1.gif" alt="company_icon" class="company_icon_img">
+                    <img src="img/company1.png" alt="company_icon" class="company_icon_img">
                     <div class="company_icon_text">
                         Надежная
                     </div>
                 </div>
                 <div class="company_icon">
-                    <img src="img/company2.gif" alt="company_icon" class="company_icon_img">
+                    <img src="img/company2.png" alt="company_icon" class="company_icon_img">
                     <div class="company_icon_text">
                         Иновационная
                     </div>
@@ -262,13 +276,13 @@
             </div>
             <div class="company_icons">
                 <div class="company_icon">
-                    <img src="img/company3.gif" alt="company_icon" class="company_icon_img">
+                    <img src="img/company3.png" alt="company_icon" class="company_icon_img">
                     <div class="company_icon_text">
                         Быстрая
                     </div>
                 </div>
                 <div class="company_icon">
-                    <img src="img/company4.gif" alt="company_icon" class="company_icon_img">
+                    <img src="img/company4.png" alt="company_icon" class="company_icon_img">
                     <div class="company_icon_text">
                         Международная
                     </div>
@@ -307,10 +321,13 @@
     </div>
 
     <!-- Footer -->
+
     <div class="footer">
         <hr>
         <div class="container">
-            <img src="img/openPIM_logo.png" alt="logo" class="logo">
+            <a href="index.html">
+                <img src="img/openPIM_logo.png" alt="logo" class="logo">
+            </a>
         </div>
         <hr>
             <div class="container footer_text flex_row">
@@ -319,30 +336,30 @@
                         <div class="footer_text_header">
                             Карта сайта
                         </div>
-                        <a class="footer_text_small">
+                        <a href="index.html" class="footer_text_small">
                             Главная
                         </a>
-                        <a class="footer_text_small">
+                        <a href="index.html#about_system" class="footer_text_small">
                             О системе
                         </a>
-                        <a class="footer_text_small">
+                        <a href="index.html#about_company" class="footer_text_small">
                             О компании
                         </a>
-                        <a class="footer_text_small">
+                        <a href="index.html#clients" class="footer_text_small">
                             Наши клиенты
                         </a>
                     </div>
                     <div class="flex_column">
-                        <a class="footer_text_small_second_col">
+                        <a href="index.html#solutions" class="footer_text_small_second_col">
                             Решения
                         </a>
-                        <a class="footer_text_small">
+                        <a href="index.html#advantages" class="footer_text_small">
                             Преимущества
                         </a>
-                        <a class="footer_text_small">
+                        <a href="index.html#start" class="footer_text_small">
                             Начать
                         </a>
-                        <a class="footer_text_small">
+                        <a href="index.html#contacts" class="footer_text_small">
                             Контакты
                         </a>
                     </div>
@@ -351,10 +368,10 @@
                     <div class="footer_text_header">
                         Ссылки
                     </div>
-                    <a class="footer_text_small_col_2">
+                    <a href="http://demo.openpim.ru/#/login?user=demo&password=demo" class="footer_text_small_col_2">
                         Демо
                     </a>
-                    <a class="footer_text_small_col_2">
+                    <a href="https://openpim.ru/university/index.html" class="footer_text_small_col_2">
                         Документация
                     </a>
                 </div>
@@ -368,4 +385,6 @@
         </div>
     </div>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </html>

@@ -9,6 +9,24 @@ html, body {
     overflow-x: hidden;
 }
 
+#toTop {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background:#0077C8;
+    padding: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor:pointer;
+}
+
+.up {
+    width: 60px;
+    display: block;
+    margin: auto;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -25,13 +43,20 @@ a {
 }
 
 .button {
-    padding: 12px 38px 12px 38px;
+    padding: 10px 36px 10px 36px;
     background: #0077C8;
     border-radius: 17px;
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
+    border: 2px solid #0077C8;
+}
+
+.button:hover {
+    color: #000000;
+    background: none;
+    border: 2px solid #000000;
 }
 
 .line_button {
@@ -41,6 +66,14 @@ a {
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
+}
+
+.line_button:hover {
+    background: #0077C8;
+    color: #FFFFFF;
+    border: none;
+    transition-duration: 0.2s;
+    border: 2px solid #0077C8;
 }
 
 .container {
@@ -85,6 +118,16 @@ a {
     margin-right: 40px;
 }
 
+.menu_item:hover {
+    color: #0077C8;
+    transition-duration: 0.2s;
+}
+
+.active {
+    color: #0077C8;
+    transition-duration: 0.2s;
+}
+
 .main_block {
     width: 100%;
     display: flex;
@@ -114,6 +157,50 @@ a {
     padding-top: 32px;
     padding-bottom: 64px;
 }
+
+.info__switch {
+    display: none;
+  }
+  
+  .info__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+  
+  .info__switch:checked~.info__body {
+    max-height: 100px;
+  }
+  
+  .info__headline::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+  
+  .info__switch:checked~.info__headline::before {
+    transform: rotate(180deg) translateY(6px);
+  }
+  
+  .info__headline {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 20px;
+    user-select: none;
+    font-weight: normal;
+    cursor: pointer;
+    color: #0077C8;
+    text-decoration: underline;
+  }
+
+  .info__headline:hover { 
+    text-decoration: none;
+  }
 
 /* О системе */ 
 
@@ -171,6 +258,11 @@ a {
     margin-bottom: 100px;
 }
 
+.solution_item:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
+
 .solution_image {
     width: 518px;
     height: 476px;
@@ -207,6 +299,13 @@ a {
     text-align: center;
 }
 
+.solution_text_statistic_item:hover {
+    background: #0077C8;
+    color: white;
+    transform: translateY(-5px);
+    transition-duration: 0.2s;
+}
+
 .solution_text_small {
     font-weight: 400;
     font-size: 18px;
@@ -234,6 +333,14 @@ a {
     margin-bottom: 120px;
 }
 
+.solution_line_button:hover {
+    background: #0077C8;
+    color: #FFFFFF;
+    border: none;
+    transition-duration: 0.2s;
+    border: 2px solid #0077C8;
+}
+
 /* Наши клиенты */ 
 
 .clients {
@@ -251,6 +358,11 @@ a {
 .client_logo {
     width: 211px;
     height: auto;
+}
+
+.client_logo:hover {
+    transform: scale(1.3);
+    transition-duration: .2s;
 }
 
 /* Преимущества */ 
@@ -278,6 +390,11 @@ a {
     height: auto;
 }
 
+.advantages_item:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
+
 .advantages_item_top {
     border: 2px solid #000000;
     border-radius: 17px 17px 0px 0px;
@@ -301,6 +418,13 @@ a {
     color: #FFFFFF;
 }
 
+.advantages_button:hover {
+    padding: 10px 22px 10px 22px;
+    background: none;
+    border: 2px solid black;
+    color: black;
+}
+
 .advantages_item_small_text {
     width: 444px;
     font-weight: 400;
@@ -317,8 +441,8 @@ a {
 }
 
 .advantages_item_bottom_text {
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 22px;
     line-height: 28px;
     color: #FFFFFF;
     width: 460px;
@@ -346,6 +470,11 @@ a {
     text-align: center;
 }
 
+.start_item:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
+
 .start_img {
     margin-top: 32px;
     width: 371.5px;
@@ -353,7 +482,6 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .start_img {
@@ -363,7 +491,6 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .start_item_text_header {
@@ -390,6 +517,11 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.start_big_item:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
 }
 
 .start_img_big {
@@ -448,6 +580,14 @@ a {
     margin-right: 64px;
 }
 
+.help_button:hover {
+    padding: 10px 36px 10px 36px;
+    border: 2px solid white;
+    background: #0077C8;
+    color: #FFFFFF;
+    transition-delay: .1s;
+}
+
 /* О компании */
 
 .company {
@@ -480,8 +620,13 @@ a {
     border-radius: 17px;
 }
 
+.company_icon:hover {
+    transform: scale(1.05);
+    transition-duration: .2s;
+}
+
 .company_icon_img {
-    width: 91px;
+    width: 84px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -558,6 +703,10 @@ hr {
     padding-right: 124px;
 }
 
+.footer_text_small:hover, .footer_text_small_second_col:hover, .footer_text_small_col_2:hover {
+    color: #0077C8;
+}
+
 .footer_text_small_second_col {
     font-weight: 500;
     font-size: 20px;
@@ -587,7 +736,38 @@ hr {
 
 /* СТРАНИЦА ОДНОГО РЕШЕНИЯ */
 
+/* Главный экран */
+
+.solution_main {
+	background: url(/img/solution_big_1.png);
+	background-size: cover;
+	border-radius: 17px;
+    height: 600px;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.solution_main:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
+
+.solution_header {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 75px;
+    color: #FFFFFF;
+    padding: 225px 0px 0px 100px;
+}
+
 /* Задача */
+
+.challenge {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .challenge_text {
     font-weight: 400;
@@ -595,4 +775,104 @@ hr {
     line-height: 28px;
     text-indent: 17px;
     width: 564px;
+}
+
+.challenge_icon_text {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #0077C8;
+    padding-top: 48px;
+    height: 76px;
+    padding-bottom: 10px;
+}
+
+.challenge_icon_small_text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.challenge_header {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 56px;
+    padding-bottom: 14px;
+}
+
+
+/* Решение */
+
+.result {
+    margin-bottom: 120px;
+}
+
+.result_img {
+    height: auto;
+    border-radius: 18px;
+}
+
+.result_img:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
+
+.main_result_text {
+    border: 2px solid #000000;
+    border-radius: 18px;
+    width: 516px;
+    height: auto;
+    margin-top: 80px;
+    padding: 32px 0px 32px 40px;
+}
+
+.main_result_text:hover {
+    transform: scale(1.02);
+    transition-duration: .2s;
+}
+
+.main_result_text_header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 32px;
+}
+
+.main_result_small_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.result_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 90px;
+}
+
+.info_one_solution {
+    margin-left: 90px;
+    margin-top: 46px;
+    font-size: 20px;
+}
+
+/* Новые решения */ 
+
+.new_solution_img {
+    border-radius: 17px;
+    margin-top: 32px;
+    width: 320px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    width: 130px;
+    margin: auto; 
 }
