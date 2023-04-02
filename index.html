@@ -28,7 +28,35 @@
                 <a href="https://openpim.ru/university/index.html" class="menu_item">Документация</a>
                 <a href="#start" class="line_button">Начать</a>
             </div>
+            <div class="mobile_menu">
+                <a href="solutions.html" class="menu_item">Решения</a>
+                <a href="#contacts" class="menu_item">Контакты</a>
+                <a href="http://demo.openpim.ru/#/login?user=demo&password=demo" class="menu_item">Демо</a>
+                <a href="https://openpim.ru/university/index.html" class="menu_item">Документация</a>
+                <a href="#start" class="line_button">Начать</a>
+            </div>
         </div>
+
+        <nav role='navigation'>
+            <a href="index.html">
+                <img src="img/openPIM_logo.png" alt="logo" class="logo">
+            </a>
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="#about_system"><li>О системе</li></a>
+                <a href="solutions.html"><li>Решения</li></a>
+                <a href="#advantages"><li>Преимущества</li></a>
+                <a href="#contacts"><li>Контакты</li></a>
+                <a href="http://demo.openpim.ru/#/login?user=demo&password=demo"><li>Демо</li></a>
+                <a href="https://openpim.ru/university/index.html"><li>Документация</li></a>
+                <a href="#start"><li class="line_button">Начать</li></a>
+              </ul>
+            </div>
+        </nav>
         <div class="main_block flex_row">
             <div class="main_block_text">
                 <div class="main_block_header">PIM система</div>
@@ -59,13 +87,11 @@
                 <div class="info__body">
                   Вебинары образовательного проекта Level One — современный формат интеллектуального досуга, который будет интересен всем, кто хочет узнать что-то новое. Всего за пару часов вы совершите путешествие в увлекательный мир науки и искусства. Талантливые лекторы
                   поделятся своими знаниями, доступно расскажут о важных научных открытиях и расширят ваш кругозор.
-              
                 </div>
             </div>
         </div>
-        <a class="about_system_video">
-            <img src="img/play.png" alt="play" class="about_system_play">
-        </a>
+        <video  src="https://openpim.ru/video/pim.mp4" controls="controls" class="about_system_video"  poster="img/video.jpg">
+        </video>
     </div>
 
     <!-- Solutions -->
@@ -132,16 +158,16 @@
     <div class="clients container">
         <div class="flex_column">         
             <div class="flex_row client_logos">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
             </div> 
             <div class="flex_row client_logos">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
-                <img src="img/icon.svg" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
+                <img src="img/rev.png" alt="client_logo" class="client_logo">
             </div>   
         </div>
     </div>
@@ -161,8 +187,8 @@
             <div class="advantages_item flex_colum">
                 <div class="advantages_item_top flex_column">
                     <div class="advantages_buttons flex_row">
-                        <a class="advantages_button">Исходники на GitHub</a>
-                        <a class="advantages_button">Демо версия</a>
+                        <a href="https://github.com/openpim" class="advantages_button">Исходники на GitHub</a>
+                        <a href="http://demo.openpim.ru" class="advantages_button">Демо версия</a>
                     </div>
                     <div class="advantages_item_small_text">
                         У Akeneo есть коммерческая версия и бесплатная. Бесплатная версия имеет довольно большие ограничения, например вы не можете нормально управлять изображениями продуктов или другими файлами, связанными с ними, а также многие другие ограничения. 
@@ -177,7 +203,7 @@
             <div class="advantages_item flex_colum">
                 <div class="advantages_item_top flex_column">
                     <div class="advantages_buttons">
-                        <a class="advantages_button">Подробное сравнение трех систем</a>
+                        <a href="https://habr.com/ru/post/526492/" class="advantages_button">Подробное сравнение трех систем</a>
                     </div>
                     <div class="advantages_item_small_text">
                         В Pimcore есть все необходимые вам функции, доступные бесплатно. Но Pimcore - это не только PIM, но и MDM система, предназначеная для крупного бизнеса, Для внедрения требуется много усилий, потому что система сложна в изучении и настройке. Имеет много избыточной функциональности.
@@ -204,24 +230,91 @@
                 <div class="start_item_text">
                     <div class="start_item_text_header">Демо версия</div>
                     <div class="start_item_text_small">Поэксперементируйте с демо<br> версией своего продукта</div>
-                    <a class="button">Подробнее</a>
+                    <a href="#openModal" class="button">Подробнее</a>
                 </div>
             </div>
+            <div id="openModal" class="modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Демо версия</h3>
+                      <a href="#close" title="Close" class="close">×</a>
+                    </div>
+                    <div class="modal-body">    
+                      <div class="modal_texts">
+                          <div class="modal_text">- это полная версия системы с демонстрационной базой данных (такая же, как у нас в демо). Вы можете использовать эту опцию, чтобы поэкспериментировать с системой. В этой демонстрации вы найдете пример возможной конфигурации с загруженными данными товаров (включая изображения и файлы).</div>
+                          <div class="modal_text">Вы можете запустить эту версию с помощью следующей команды (после установки docker):</div>
+                          <div class="modal_text code">docker run -d -p 80:80 openpim/demo:1.5</div>
+                          <div class="modal_text">После этого вам нужно подождать несколько секунд, пока система запустится, и тогда она будет доступна через веб-браузер через порт 80. Например, если вы запустите систему на локальном компьютере, она будет доступна на <b><u><a href="http://localhost">http://localhost</a></u></b>.</div>
+                          <div class="modal_text">В системе будет настроено 2 пользователя (со следующим именем пользователя/паролем): <b>admin/admin</b> and <b>demo/demo</b> .</div>
+                          <div class="modal_text">Мы не рекомендуем использовать эту версию для реальной работы, потому что каждый раз, когда вы запускаете ее, вы теряете все свои изменения. Используйте эту версию только для изучения системы.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
             <div class="start_item flex_column">
                 <img src="img/start2.svg" alt="demo" class="start_img">
                 <div class="start_item_text">
                     <div class="start_item_text_header">Документация</div>
                     <div class="start_item_text_small">Документация расскажет, как настроить<br> систему под конкретную компанию</div>
-                    <a class="button">Подробнее</a>
+                    <a href="https://openpim.ru/university/index.html" class="button">Подробнее</a>
                 </div>
             </div>
         </div>
-        <div class="start_big_item flex_row">
+        <div class="full_version">
+             <div class="start_big_item flex_row">
             <img src="img/start3.svg" alt="demo" class="start_img_big">
             <div class="start_big_item_text">
-                <div class="start_item_text_header">Документация</div>
-                <div class="start_item_text_small">Документация расскажет, как настроить<br> систему под конкретную компанию</div>
-                <a class="button">Подробнее</a>
+                <div class="start_item_text_header">Версия для <br>реальной работы</div>
+                <div class="start_item_text_small">Запустите свой проект <br>с помощью этой версии</div>
+                <a href="#openModal1"  class="button">Подробнее</a>
+            </div>
+        </div>
+        </div>
+        <div class="mobile">
+            <div class="start_item flex_column">
+           <img src="img/start3.svg" alt="demo" class="start_img">
+           <div class="start_item_text">
+               <div class="start_item_text_header">Версия для <br>реальной работы</div>
+               <div class="start_item_text_small">Запустите свой проект <br>с помощью этой версии</div>
+               <a href="#openModal1"  class="button">Подробнее</a>
+           </div>
+       </div>
+       </div>
+        <div id="openModal1" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Версия для реальной работы</h3>
+                  <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">    
+                  <div class="modal_texts">
+                      <div class="modal_text">Если вы хотите запустить систему, вам следует использовать эту опцию. Это версия системы без базы данных, поэтому вы должны сначала установить базу данных, а затем запустить эту версию. Таким образом, вы должны выполнить следующие шаги, чтобы запустить систему:</div>
+                      <div class="modal_text"><b>1.</b> Установите бесплатную базу данных PostgreSQL. Вы можете установить его локально или на любом сервере. Вы можете найти подробную информацию о том, как установить его, в этом руководстве .
+                        <br><br><b>2.</b> Не забудьте отредактировать файл pg_hba.conf, чтобы сконфигурировать базу данных для приема внешних соединений.
+                        <br><br><b>3.</b> Загрузите файл init.sql . Это необходимо для инициализации вашей базы данных для запуска системы.
+                        <br><br><b>4.</b> Запустите команду:</div>
+                      <div class="modal_text code">psql -U [username] -d [database name] < init.sql</div>
+                      <div class="modal_text">,где [username] - это пользователь базы данных, который вы используете (пользователь по умолчанию - postgres), [database name] - это имя базы данных, которое вы используете (имя базы данных по умолчанию - postgres).
+                        Это создаст начальные данные в вашей базе данных, которые необходимы для запуска и работы системы.</div>
+                      <div class="modal_text"><b>5.</b> Теперь вы можете запустить систему с помощью следующей команды:</div>
+                      <div class="modal_text code">docker run -d -p 80:80 -v [path to file storage]:/filestorage --env OPENPIM_DATABASE_ADDRESS=[database host] --env OPENPIM_DATABASE_NAME=[database name] --env OPENPIM_DATABASE_USER=[database user] --env OPENPIM_DATABASE_PASSWORD=[database password] openpim/russian:1.5</div>
+                      <div class="modal_text">
+                        где:
+                        <br>[path to file storage] - путь к любому локальному каталогу, в котором система будет             
+                        хранить загруженные изображения и файлы
+                        <br>[database host] - адрес сервера базы данных
+                        <br>[database name] - имя базы данных
+                        <br>[database user] - пользователь
+                        <br>[database password] - пароль</div>
+                        <div class="modal_text">После этого вам нужно подождать несколько секунд, пока система запустится, и тогда она будет доступна через веб-браузер через порт 80. Например, если вы запустите систему на локальном компьютере, она будет доступна на <b><u><a href="http://localhost">http://localhost</a></u></b>.</div>
+                        <div class="modal_text">В системе будет настроен только один пользователь (со следующим именем пользователя/паролем): <b>admin/admin</b>.</div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -297,7 +390,7 @@
         Контакты
     </div>
     <div class="contacts container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3996.744759176389!2d30.364220000000003!3d59.942556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696319928be4683%3A0x403f675ccf7d6d86!2sUlitsa%20Radishcheva%2C%2039%2C%20Sankt-Peterburg%2C%20191014!5e0!3m2!1sen!2sru!4v1680183762103!5m2!1sen!2sru" width="517" height="475" style="border:0; border-radius: 17px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3996.744759176389!2d30.364220000000003!3d59.942556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696319928be4683%3A0x403f675ccf7d6d86!2sUlitsa%20Radishcheva%2C%2039%2C%20Sankt-Peterburg%2C%20191014!5e0!3m2!1sen!2sru!4v1680183762103!5m2!1sen!2sru" class="map"></iframe>
         <div class="contacts_text">
             <div class="contacts_big_text">
                 Адрес

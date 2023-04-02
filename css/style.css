@@ -450,6 +450,139 @@ a {
 
 /* Начать */ 
 
+/* Стили всплывающего окна по-умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* фон */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* При отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    display: block;
+    margin: 100px 381px;
+    width: 1141px;
+}
+
+/* Стили для блока с контентом окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 2px solid #000000;
+    border-radius: 17px;
+    outline: 0;
+}
+
+/* Стили заголовка окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    margin-left: 20px;
+}
+/* Стили кнопки "х" ("Закрыть")  */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-decoration: none;
+    padding-right: 32px;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+}
+/* Стили блока основного содержимого окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+    width: auto;
+}
+
+.modal_texts {
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.modal_text {
+    padding: 0px 32px 32px 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+@font-face {
+    font-family: 'Courier New';
+    src: url('CourierNewPSMT.eot');
+    src: local('Courier New'), local('CourierNewPSMT'),
+        url('CourierNewPSMT.eot?#iefix') format('embedded-opentype'),
+        url('CourierNewPSMT.woff2') format('woff2'),
+        url('CourierNewPSMT.woff') format('woff'),
+        url('CourierNewPSMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.code {
+    font-family: 'Courier New';
+}
+
 .start {
     margin-bottom: 120px;
 }
@@ -734,6 +867,13 @@ hr {
     margin-bottom: 32px;
 }
 
+.map {
+    width: 516px;
+    height: 475px;
+    border: 0px;
+    border-radius: 17px;
+}
+
 /* СТРАНИЦА ОДНОГО РЕШЕНИЯ */
 
 /* Главный экран */
@@ -822,10 +962,10 @@ hr {
 .main_result_text {
     border: 2px solid #000000;
     border-radius: 18px;
-    width: 516px;
+    width: 514px;
     height: auto;
     margin-top: 80px;
-    padding: 32px 0px 32px 40px;
+    padding: 32px 40px 32px 40px;
 }
 
 .main_result_text:hover {
@@ -876,3 +1016,892 @@ hr {
     width: 130px;
     margin: auto; 
 }
+
+.mobile_menu {
+    visibility: hidden;
+    display: none;
+}
+
+.mobile {
+    display: none;
+    visibility: hidden;
+}
+
+nav {
+    display: none;
+    visibility: hidden;
+}
+
+/* Адаптив для ноутбука */
+
+
+@media (min-width: 1750px) and (max-width: 1800px) {
+
+    .container {
+        width: 68%;
+        margin: 0 auto;
+    }
+
+    .about_system_video, .advantages_items, .start_big_item, .contacts_text {
+        margin-bottom: 120px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1749px) {
+
+    .container {
+        width: 68%;
+        margin: 0 auto;
+    }
+
+    .about_system_video, .advantages_items, .start_big_item, .contacts_text {
+        margin-bottom: 120px;
+    }
+
+    .menu {
+        font-weight: 500;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    
+    .menu_item {
+        margin-right: 20px;
+    }
+
+    .logo {
+        width: 162px;
+    }
+
+    .main_block_small_text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 38px;
+        padding-top: 20px;
+        padding-bottom: 32px;
+    }
+
+    .main_block_text {
+        padding-top: 220px;
+    }
+
+    .solution_image {
+        width: 436px;
+        height: 446px;
+    }
+
+    .solution_text_small {
+        padding-bottom: 42px;
+    }
+
+    .advantages_button {
+        font-size: 18px;
+    }
+
+    .advantages_item_top {
+        padding: 40px 40px 60px 32px;
+    }
+
+    .advantages_item_bottom_text {
+        font-size: 20px;
+    }
+
+    .modal-dialog {
+        margin: 100px 180px;
+    }
+
+    .company_text {
+        width: 464px;
+    }
+
+    .mobile_menu {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (min-width: 1199px) and (max-width: 1499px), (min-width: 1000px) and (max-width: 1198px) , (min-width: 970px) and (max-width: 1198px), (min-width: 769px) and (max-width: 969px) {
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .about_system_video, .advantages_items, .start_big_item, .contacts_text, .help, .main_block, .challenge, .start {
+        margin-bottom: 64px;
+    }
+
+    .menu {
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    
+    .menu_item {
+        margin-right: 20px;
+    }
+
+    .logo {
+        width: 122px;
+        margin-top: 8px;
+    }
+
+    .main {
+        width: 80%;
+    }
+
+    .button {
+        padding: 6px 28px 6px 28px;
+        border-radius: 14px;
+    }
+    
+    .line_button {
+        padding: 6px 28px 6px 28px;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    .solution_line_button {
+        padding: 6px 2px 6px 2px;
+        border-radius: 14px;
+        font-size: 18px;
+        width: 113px;
+        margin-bottom: 100px;
+    }
+
+    .client_logos {
+        padding-bottom: 64px;
+    }
+
+    .main_block_small_text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 38px;
+        padding-top: 20px;
+        padding-bottom: 32px;
+    }
+
+    .main_block_text {
+        padding-top: 90px;
+    }
+
+    .nav_bar {
+        margin-top: -30px;
+    }
+
+    .background {
+        width: 48%;
+        height: auto;
+        margin-top: -34px;
+    }
+
+    .main_block_header {
+        font-size: 50px;
+    }
+
+    .header {
+        padding-bottom: 16px;
+    }
+
+    .about_system_video {
+        height: 500px;
+        margin-top: 20px;
+    }
+
+    .about_system_big_text {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    
+    .about_system_small_text, .info__headline, .start_item_text_small, .footer_text_small, .footer_text_small_second_col, .footer_text_small_col_2, .challenge_icon_small_text, .main_result_small_text  {
+        font-size: 18px;
+    }
+
+    .solution_image {
+        width: 300px;
+        height: 300px;
+        margin-top: 44px;
+        margin-left: 32px;
+        margin-bottom: 40px;
+    }
+
+    .solution_text_statistic_items {
+        width: 350px;
+        padding-bottom: 12px;
+    }
+
+    .solution_text {
+        padding: 32px 32px 0 22px;
+    }
+
+    .solution_text_statistic_item {
+        width: 106px;
+        height: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        border-radius: 9px;
+    }
+
+    .solution_text_small {
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+
+    .solution_text_header{
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    .solution_item {
+        margin-bottom: 64px;
+    }
+
+    .advantages_text {
+        font-size: 18px;
+        padding-bottom: 32px;
+    }
+
+    .advantages_item_small_text {
+        width: 344px;
+        font-size: 18px;
+    }
+
+    .advantages_button {
+        padding: 8px 12px 8px 12px;
+        border-radius: 14px;
+        font-size: 16px;
+    }
+
+    .advantages_buttons {
+        padding-bottom: 14px;
+    }
+
+    .advantages_button:hover {
+        padding: 6px 10px 6px 10px;
+        border-radius: 14px;
+        font-size: 16px;
+    }
+
+    .advantages_item_bottom_text {
+        width: 344px;
+        font-size: 18px;
+    }
+
+    .advantages_item_top {
+        padding: 32px 32px 20px 32px;
+    }
+
+    .advantages_item_bottom {
+        padding: 60px 86px 92px 40px;
+        margin-top: -2px;
+    }
+
+    .start_img {
+        width: 300px;
+    }
+
+    .start_item_text_header {
+        font-size: 22px;
+        padding-bottom: 14px;
+    } 
+
+    .start_item_text_small {
+        padding-bottom: 32px;
+    }
+
+    .start_img_big {
+        width: 320px;
+        height: 320px;
+        margin: 64px 0px 64px 64px;
+    }
+
+    .start_big_item_text {
+        display: block;
+        margin: 100px auto;
+    }
+
+    .help_text_header, .help_text_small_bold  {
+        padding-bottom: 32px;
+    }
+
+    .help {
+        padding: 64px 0px 64px 0px;
+    }
+
+    .help_button {
+        padding: 8px 20px 8px 20px;
+        font-size: 18px;
+    }
+
+    .help_button:hover {
+        padding: 6px 18px 6px 18px;
+        font-size: 18px;
+    }
+
+    .company_text {
+        font-size: 18px;
+        width: 450px;
+    }
+
+    .company_icon {
+        width: 146px;
+        height: 146px;
+    }
+
+    .company_icons {
+        width: 314px;
+        margin-bottom: 20px;
+    }
+
+    .company_icon_img {
+        width: 64px;
+        margin-top: 26px;
+        padding-bottom: 14px;
+    }
+
+    .company_icon_text {
+        font-size: 16px;
+    }
+
+    .contacts_text {
+        padding-top: 14px;
+        padding-left: 222px;
+    }
+
+    .contacts_big_text, .footer_text_header {
+        font-size: 22px;
+    }
+
+    .contacts_small_text {
+        font-size: 18px;
+        padding-top: 14px;
+        padding-bottom: 20px;
+    }
+
+    .footer {
+        margin-top: 0px;
+    }
+
+    hr {
+        border: 1.5px solid #000000;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .footer_text_small {
+        padding-bottom: 20px;
+        padding-right: 84px;
+    }
+
+    .footer_text_small_second_col {
+        padding-bottom: 20px;
+        padding-top: 60px;
+    }
+
+    .footer_text_small_col_2 {
+        padding-bottom: 20px;
+    }
+
+    .text_after_footer {
+        font-size: 18px;
+        margin-bottom: 64px;
+    }
+
+    .map {
+        width: 350px;
+        height: 350px;
+        border: 0px;
+        border-radius: 17px;
+    }
+
+    .client_logo {
+        width: 180px;
+        height: auto;
+    }
+
+    .up {
+        width: 40px;
+    }
+
+    #toTop {
+        width: 40px;
+        height: 40px;
+    }
+
+    .solution_main {
+        height: 400px;
+        margin-top: 64px;
+        margin-bottom: 100px;
+    }
+
+    .solution_header {
+        font-size: 64px;
+        padding: 125px 0px 0px 60px;
+    }
+
+    .challenge_icon_text {
+        font-size: 22px;
+        padding-top: 30px;
+        height: 76px;
+        padding-bottom: 0px;
+    }
+
+    .challenge_text {
+        font-size: 18px;
+        width: 500px;
+        padding-bottom: 64px;
+    }
+
+    .result_img {
+        width: 350px;
+        height: auto;
+        border-radius: 18px;
+    }
+
+    .main_result_text {
+        border-radius: 17px;
+        width: 310px;
+        height: auto;
+        margin-top: 64px;
+        padding: 32px 0px 32px 20px;
+    }
+
+    .main_result_text_header {
+        font-size: 20px;
+        padding-bottom: 14px;
+    }
+
+    .result_text {
+        font-size: 18px;
+        margin-left: 32px;
+        line-height: 25px;
+    }
+
+    .info_one_solution {
+        margin-left: 32px;
+        margin-top: 20px;
+        font-size: 18px;
+        padding-bottom: 64px;
+    }
+
+    .footer {
+        margin-top: 64px;
+    }
+
+    .modal-dialog {
+        display: block;
+        margin: 20px 0px 0px 190px;
+        width: 70.9%;
+    }
+
+    .modal_texts {
+        padding-top: 14px;
+        margin-bottom: 14px;
+    }
+
+    .modal_text {
+        padding: 0px 14px 20px 14px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .modal-header {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .mobile_menu {
+        visibility: hidden;
+        display: none;
+    }
+
+}
+
+    @media (min-width: 970px) and (max-width: 1100px), (min-width: 1101px) and (max-width: 1198px), (min-width: 769px) and (max-width: 969px), (min-width: 769px) and (max-width: 969px) {
+        .container {
+            width: 86%;
+            margin: 0 auto;
+        }
+
+        .main {
+            width: 86%;
+            margin: 50px auto;
+        }
+
+        .button, .line_button {
+            padding: 6px 16px 6px 16px;
+        }
+
+        .menu {
+            visibility: hidden;
+            display: none;
+        }
+
+        .menu_item {
+            font-size: 18px;
+        }
+
+        .mobile_menu {
+            visibility:inherit;
+            display: block;
+        }
+
+        .mobile_menu {
+            font-weight: 500;
+            padding-top: 10px;
+            font-size: 18px;
+        }
+
+         .main_block_text {
+            padding-top: 70px;
+        }
+
+    }
+
+    @media (min-width: 1101px) and (max-width: 1198px) {
+        .container {
+            width: 74%;
+            margin: 0 auto;
+        }
+
+        .solution_text_small {
+            padding-bottom: 30px;
+        }
+
+        .solution_text {
+            padding: 32px 13px 0 22px;
+        }
+
+    }
+
+    @media (min-width: 769px) and (max-width: 969px), (min-width: 480px) and (max-width: 968px) {
+
+        .container {
+            width: 64%;
+            margin: 0 auto;
+        }
+
+        .button, .line_button {
+            font-size: 14px;
+            border-radius: 10px;
+            padding: 6px 16px 6px 16px;
+        }
+
+        .main_block_small_text {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            padding-top: 10px;
+            padding-bottom: 14px;
+        }
+
+        .main_block_header {
+            font-size: 42px;
+        }
+
+        .main_block_text {
+            padding-top: 30px;
+        }
+
+        .menu_item, .about_system_small_text, .info__headline, .start_item_text_small, .footer_text_small, .footer_text_small_second_col, .footer_text_small_col_2, 
+        .challenge_icon_small_text, .main_result_small_text, .advantages_text, .advantages_item_small_text {
+            font-size: 16px;
+        }
+
+        .header {
+            font-size: 32px;
+            padding-bottom: 0px;
+        }
+
+        .about_system_video {
+            height: 300px;
+        }
+
+        .solution_item {
+            display: flex;
+            flex-direction: column;
+            margin: 0px 28px 64px 0px;
+            padding-bottom: 32px;
+        }
+
+        .solution_items {
+            margin-left: 56px;
+        }
+
+        .solution_image {
+            margin-left: 51px;
+            margin-bottom: -8px;
+        }
+
+        .client_logos {
+            padding-bottom: 0px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .client_logo {
+            width: 120px;
+            padding-bottom: 64px;
+        }
+
+        .advantages_items, .start_items, .company, .contacts   {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .advantages_item, .start_item {
+            width: 90%;
+            height: auto;
+            margin-bottom: 64px;
+            margin-left: 30px;
+        }
+
+        .full_version {
+            display: none;
+            visibility: hidden;
+        }
+
+        .company_text {
+            width: 500px;
+            padding-bottom: 32px;
+        }
+
+        .company_icons, .map {
+            margin-left: 100px;
+        }
+
+        .contacts_text {
+            padding-top: 32px;
+            padding-left: 50px;
+            text-align: center;
+        }
+
+        .footer_text_small {
+            width: 106px;
+        }
+
+        .footer_text_col_2 {
+            padding-left: 0px;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 968px) {
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .main_block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            width: 156px;
+        }
+
+        .line_button {
+            height: 18px;
+            line-height: 20px;
+            font-size: 20px;
+            width: 137px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu_item {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav_bar {
+            display: none;
+            visibility: hidden;
+        }
+        
+        #menuToggle
+        {
+        display: block;
+        position: absolute;
+        top: 62px;
+        right: 50px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+        }
+
+        #menuToggle input
+        {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+        }
+
+        #menuToggle span
+        {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: black;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+        }
+
+        #menuToggle span:first-child
+        {
+        transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2)
+        {
+        transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked ~ span
+        {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #000000;
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(3)
+        {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(2)
+        {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menu {
+            position: absolute;
+            width: 167px;
+            margin: 20px 0 0 0;
+            padding: 26px;
+            padding-top: 26px;
+            right: -18px;
+            border-radius: 17px;
+            border: 2px solid #000000;
+            background: white;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(210%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+
+        #menu li
+        {
+        padding: 10px 0;
+        font-size: 20px;
+        }
+
+        li:hover {
+            color: #0077C8;
+        }
+
+        #menuToggle input:checked ~ ul
+        {
+        transform: none;
+        opacity: 1;
+        }
+
+        nav {
+            display: block;
+            visibility:visible;
+        }
+
+        @media screen and (max-width: 768px) {
+        #menu {
+            transform: none;
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+        }
+        
+        .background {
+            width: 100%;
+        }
+
+        .main_block_text {
+            text-align: center;
+            margin-bottom: 32px;
+            margin-top: 14px;
+        }
+
+        .about_system_big_text {
+            font-size: 20px;
+        }
+
+        .menu_item, .about_system_small_text, .info__headline, .start_item_text_small, .footer_text_small, .footer_text_small_second_col, .footer_text_small_col_2, .challenge_icon_small_text, .main_result_small_text, .advantages_text, .advantages_item_small_text {
+            font-size: 14px;
+        }
+
+        .solution_image {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 40px auto;
+            margin-bottom: 10px;
+        }
+
+        .solution_text_header {
+            font-size: 22px;
+            padding-bottom: 14px;
+        }
+
+        .solution_text {
+            display: block;
+            margin: 0 auto;
+            padding: 0px 0px 0px 10px;
+            text-align: center
+        }
+
+        .solution_text_statistic_item {
+            width: 100px;
+            height: 28px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;
+            text-align: center;
+        }
+
+        .solution_text_statistic_items {
+            width: 320px;
+            padding-bottom: 14px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .solution_text_small {
+            font-size: 16px;
+            padding-bottom: 32px;
+        }
+
+        .client_logos {
+            padding-bottom: 0px;
+        }
+
+        .client_logo {
+            width: 170px;
+        }
+    }
