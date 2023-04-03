@@ -1684,7 +1684,7 @@ nav {
         }
     }
 
-    @media (min-width: 480px) and (max-width: 968px) {
+    @media (max-width: 968px) {
 
         .container {
             width: 90%;
@@ -1801,9 +1801,8 @@ nav {
             background: white;
             list-style-type: none;
             -webkit-font-smoothing: antialiased;
-            transform-origin: 0% 0%;
-            transform: translate(210%, 0);
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         }
 
         #menu li
